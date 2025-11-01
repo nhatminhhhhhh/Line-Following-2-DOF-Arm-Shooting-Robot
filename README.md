@@ -9,6 +9,6 @@ The receiver receive control data and control GPIO
 I use simple algorithm in this robot. There are 9 IF Sensor, 7 sensors are used to detect error, 2 sensors placed in front of the robot to detect broken lines.
 The sensors are arranged as follows:  
                                    |sensor 9|  
-                                   |sensor 8|
+                                   |sensor 8|    
 |sensor 1|  |sensor2|  |sensor 3|  |sensor4|  |sensor 5|  |sensor 6|  |sensor 7|  
 
