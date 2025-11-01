@@ -14,6 +14,7 @@ The sensors are arranged as follows:
 
 Trạng thái lệch vạch được xác định như sau:  
 > -2 * (sensor 1) - (sensor 2) + sensor 6 + 2 * sensor 7
+
 Nếu cảm biến nằm trên line, giá trị trả về sẽ là 1 (ngược lại là 0). Khi đó, ta có các độ lệch line tương ứng là -2, -1, 0, 1, 2
   
 
