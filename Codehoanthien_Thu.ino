@@ -255,15 +255,15 @@ int trangThai5CamBien ()
       break;
     case 0:
       if ( (abs(sens1) + abs(sens2) + abs(sens3) + abs(sens4) + abs(sens5) + abs(sens6)+ abs(sens7) + abs(sens8) + abs(sens9))== 0  )
-        return 200; // 7 cảm biến chính vượt line, 2 cảm biến phụ không có line ngắt 
+        return 200; // 7 cảm biến chính vượt line, 2 cảm biến phụ không phát hiện line ngắt đoạn phía trước
       else if ( (abs(sens1) + abs(sens2) + abs(sens3) + abs(sens4) + abs(sens5) + abs(sens6)+ abs(sens7)) == 7)
-       return 100;   // 7 mat nam tren line den => dung lai
+       return 100;   // 7 cảm biến đều nằm trên line den => dừng lai
       else if ( (abs(sens1) + abs(sens2) + abs(sens3) + abs(sens4) + abs(sens5) + abs(sens6)+ abs(sens7) ) == 0 && (abs(sens8) + abs(sens9))== 1)
         return 0; // 7 cảm biến chính không bắt được line nào nhưng 1 trong 2 cảm biến phụ bắt được line phía trước (line ngắt) thì tiếp tục đi thẳng  
       else if ( (abs(sens1) + abs(sens2) + abs(sens3) + abs(sens4) + abs(sens5) + abs(sens6)+ abs(sens7)) == 1)
-        return 0;
+        return 0;// 1 trong 2 cảm biến 3/ cảm biến 4 đang nằm trên line -> đi thằng
       else if ( (abs(sens1) + abs(sens2) + abs(sens3) + abs(sens4) + abs(sens5) + abs(sens6)+ abs(sens7)) == 2)
-        return 0;
+        return 0;// 2 cảm biến 3 và 4 có thể bắt được line (line nằm chính giữa 2 cảm biến) -> đi thẳng
       break;
     case 1:
       return 1;
