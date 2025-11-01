@@ -8,15 +8,16 @@ RX nhận tín hiệu điều khiển từ TX và điều khiển các chức n�
 ### Line-folling mode  
 I use simple algorithm in this robot. There are 9 IF Sensor, 7 sensors are used to detect error, 2 sensors placed in front of the robot to detect broken lines.
 The sensors are arranged as follows:  
-...........................................|sensor 9|...................................  
-...........................................|sensor 8|...................................    
+....................................................|sensor 9|...................................  
+....................................................|sensor 8|...................................    
 |sensor 1|  |sensor2|  |sensor 3|  |sensor4|  |sensor 5|  |sensor 6|  |sensor 7|    
 
 Trạng thái lệch vạch được xác định như sau:  
 > -2 * (sensor 1) - (sensor 2) + sensor 6 + 2 * sensor 7
 
 Khi cảm biến nằm trên line, giá trị trả về sẽ là 1 (ngược lại là 0).   
-> Nếu cảm biến của bạn trả về giá trị 0 khi nằm trên line, chỉ cần return (!digitalRead (PinNumb)) ở hàm IFSensor().   
+> Nếu cảm biến của bạn trả về giá trị 0 khi nằm trên line, chỉ cần return (!digitalRead (PinNumb)) ở hàm IFSensor().
+
 Khi đó, ta có các độ lệch line tương ứng là -3, -2, -1, 0, 1, 2, 3  
 Nếu độ lệch line là 0, chúng ta sẽ có các trường hợp sau:  
 * Robot văng khỏi line -> đi lùi
